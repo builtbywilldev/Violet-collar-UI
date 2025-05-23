@@ -1,38 +1,64 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #00ffcc;
+  font-family: 'JetBrains Mono', monospace;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.os__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.os__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.os__sub {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: -10px;
+}
+
+.os__main {
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid #00ffcc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #111;
+  box-shadow: 0 0 10px #00ffcc55;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.os__terminalBox {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.os__line {
+  margin: 0;
+}
+
+
+.os__terminalBox:hover {
+  color: #ff3366;
+  transition: color 0.3s ease;
+}
+.terminal__bootBox {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #111;
+  border: 1px solid #00ffcc;
+  box-shadow: 0 0 10px #00ffcc33;
+  padding: 1rem;
+  margin: 24px auto; /* ✅ this is the key fix */
+  text-align: left;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 6px;
+  
 }
