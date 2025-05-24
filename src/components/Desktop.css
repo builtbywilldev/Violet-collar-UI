@@ -1,0 +1,33 @@
+.desktop {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.desktop__icon {
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.desktop__icon:hover {
+  transform: scale(1.1);
+  color: #b388ff;
+  text-shadow: 0 0 8px #b388ff, 0 0 16px #b388ff88;
+}
+
+/* Assign static base colors */
+.desktop__icon:nth-child(1) i {
+  color: #00ffff; /* Terminal: Cyan */
+}
+.desktop__icon:nth-child(2) i {
+  color: #ffcc00; /* Logs: Yellow */
+}
+.desktop__icon:nth-child(3) i {
+  color: #ff4444; /* Firewall: Red */
+}
+.desktop__icon:nth-child(4) i {
+  color: #66ff66; /* Agent: Green */
+}

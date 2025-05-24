@@ -62,3 +62,29 @@ body {
   border-radius: 6px;
   
 }
+
+.desktop {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.desktop__icon {
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.desktop__icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.page {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}

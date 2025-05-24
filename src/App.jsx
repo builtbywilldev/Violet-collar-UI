@@ -1,18 +1,22 @@
-import './App.css';
+import React, { useState, useEffect } from 'react';
 import TerminalBoot from './components/TerminalBoot';
-
+import Desktop from './components/Desktop';
+import './App.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function App() {
-  return (
-    <div className="os__wrapper">
-      <header className="os__header">
-        <h1>Red__Collar--OS</h1>
-        <p className="os__sub">Terminal UI Booting...</p>
-      </header>
+  const [bootComplete, setBootComplete] = useState(false);
 
-      <main className="os__main">
-       <TerminalBoot />
-      </main>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setBootComplete(true);
+    }, 3000); // 3 sec boot
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="App">
+      {bootComplete ? <Desktop /> : <TerminalBoot />}
     </div>
   );
 }

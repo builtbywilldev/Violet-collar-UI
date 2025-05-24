@@ -1,27 +1,36 @@
 .terminal__bootBox {
   font-family: 'JetBrains Mono', monospace;
   background-color: #111;
-  border: 1px solid #00ffcc;
-  box-shadow: 0 0 10px #00ffcc33;
+  border: 1px solid #b388ff;
+  box-shadow: 0 0 12px #b388ff55;
   padding: 1rem;
   margin-top: 2rem;
   width: 90%;
   max-width: 600px;
   border-radius: 6px;
+  text-align: left;
+  color: #b388ff;
 }
 
 .terminal__line {
-  color: #00ffcc;
+  color: #b388ff;
   margin: 0;
-  animation: fadeIn 0.3s ease-in;
+  animation: fadeIn 0.4s ease-in, flicker 1s infinite alternate;
+  text-shadow: 0 0 6px #b388ff66;
 }
 
 .terminal__line:last-child {
-  color: #ff3c6d;
+  color: #ff4e99;
   font-weight: bold;
+  text-shadow: 0 0 8px #ff4e9988;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
+  from { opacity: 0; transform: translateY(-4px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flicker {
+  from { opacity: 1; }
+  to { opacity: 0.85; }
 }
